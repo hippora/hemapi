@@ -1,9 +1,9 @@
 package m
 
 import (
-_ "github.com/mattn/go-sqlite3"
-"github.com/go-xorm/xorm"
-"log"
+	_ "github.com/mattn/go-sqlite3"
+	"github.com/go-xorm/xorm"
+	"log"
 )
 
 var db *xorm.Engine

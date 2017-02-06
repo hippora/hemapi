@@ -1,17 +1,17 @@
 package main
 
-import "github.com/kataras/iris"
-
+import (
+	"github.com/kataras/iris"
+	"github.com/hippora/hemapi/h"
+)
 
 
 func init() {
-	iris.Get("/a/article",api_article)
-	iris.Get("/a/user",api_register_user)
-
+	iris.Get("/a/article", h.GetArticle)
+	iris.Post("/a/user", h.EnrolUser)
 }
 
-
 func main() {
-	iris.Config.Gzip = true
+	//iris.OptionGzip(true)
 	iris.Listen(":8080")
 }
